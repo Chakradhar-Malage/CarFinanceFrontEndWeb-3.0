@@ -1,17 +1,11 @@
 {
-  "/exportData/page": "app/exportData/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/customer_ledger/page": "app/customer_ledger/page.js",
-  "/HomeUIafterSignin/page": "app/HomeUIafterSignin/page.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/HomeforNewVehicle/page": "app/HomeforNewVehicle/page.js",
-  "/Companies/page": "app/Companies/page.js",
-  "/BillingTypes/page": "app/BillingTypes/page.js",
-  "/ViewInvoices/page": "app/ViewInvoices/page.js",
-  "/GenerateInvoice/page": "app/GenerateInvoice/page.js",
+  "/page": "app/page.js",
   "/SignIn/page": "app/SignIn/page.js",
-  "/GstBilling_ledger/page": "app/GstBilling_ledger/page.js",
-  "/Addpaymentpopup/page": "app/Addpaymentpopup/page.js",
-  "/ViewCarDetails/page": "app/ViewCarDetails/page.js",
-  "/CustomerWiseVehicleRecord/page": "app/CustomerWiseVehicleRecord/page.js"
+  "/Companies/page": "app/Companies/page.js",
+  "/HomeUIafterSignin/page": "app/HomeUIafterSignin/page.js",
+  "/exportData/page": "app/exportData/page.js",
+  "/CustomerWiseVehicleRecord/page": "app/CustomerWiseVehicleRecord/page.js",
+  "/customer_ledger/page": "app/customer_ledger/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }
