@@ -100,12 +100,13 @@ const ExportData = () => {
     setLoading(true);
 
     try {
-      // const response = await fetch(
-      //   `http://15.207.48.53:3000/export-month?month=${month}&year=${year}`
-      // );
       const response = await fetch(
-        `http://15.207.48.53:3000/export-month?month=${month}`
+        `http://15.207.48.53:3000/export-month?month=${month}&year=${year}`
       );
+      // Old api call; revert back to this api call if anything goes wrong
+      // const response = await fetch(
+      //   `http://15.207.48.53:3000/export-month?month=${month}`
+      // );
 
       const result = await response.json();
 
