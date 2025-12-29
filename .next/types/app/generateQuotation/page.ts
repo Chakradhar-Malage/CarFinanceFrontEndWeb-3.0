@@ -1,4 +1,4 @@
-// File: /home/ubuntu/CarFinanceBackend/CarFinanceBackend/CarFinanceFrontendWeb/src/app/generateQuotation/page.tsx
+// File: C:\Users\chaku\OneDrive\Desktop\CarFinanceFrontendWeb\src\app\generateQuotation\page.tsx
 import * as entry from '../../../../src/app/generateQuotation/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

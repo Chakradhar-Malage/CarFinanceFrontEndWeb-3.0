@@ -2,7 +2,7 @@
 
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 import { useRouter } from "next/navigation";
 
@@ -47,11 +47,21 @@ const ExportData = () => {
   }, []);
 
   // Generate years from 2025 to next year
-  const currentYear = moment().year();
-  const years = [];
-  for (let y = 2025; y <= currentYear + 1; y++) {
-    years.push(y);
-  }
+  // const currentYear = moment().year();
+  // const years = [];
+  // for (let y = 2025; y <= currentYear + 1; y++) {
+  //   years.push(y);
+  // }
+
+  const years = useMemo(() => {
+    const currentYear = moment().year();
+    const result: number[] = [];
+    for (let y = 2025; y <= currentYear + 1; y++) {
+      result.push(y);
+    }
+    return result;
+  }, []);
+
 
   // Fetch the list of cars for the selected month
 

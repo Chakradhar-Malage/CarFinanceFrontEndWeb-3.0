@@ -1,4 +1,4 @@
-// File: /home/ubuntu/CarFinanceBackend/CarFinanceBackend/CarFinanceFrontendWeb/src/app/ViewCarDetails/page.tsx
+// File: C:\Users\chaku\OneDrive\Desktop\CarFinanceFrontendWeb\src\app\ViewCarDetails\page.tsx
 import * as entry from '../../../../src/app/ViewCarDetails/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -1,4 +1,4 @@
-// File: /home/ubuntu/CarFinanceBackend/CarFinanceBackend/CarFinanceFrontendWeb/src/app/CustomerWiseVehicleRecord/page.tsx
+// File: C:\Users\chaku\OneDrive\Desktop\CarFinanceFrontendWeb\src\app\CustomerWiseVehicleRecord\page.tsx
 import * as entry from '../../../../src/app/CustomerWiseVehicleRecord/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
