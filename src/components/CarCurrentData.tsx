@@ -15,7 +15,7 @@ interface CarDataResponse {
 }
 
 const CarCurrentData = () => {
-      const [carData, setCarData] = useState<any[]>([]);
+  const [carData, setCarData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
@@ -60,12 +60,13 @@ const CarCurrentData = () => {
           }}
         >
           <Image
-            src="/images/CardetailsComponentImg.png"
+            src="/webbuild/images/CardetailsComponentImg.png"
             alt="Car Image"
             width={55}
             height={55}
             className="rounded-lg bg-purple-600"
           />
+          
           <div className="ml-4 flex-1">
             <p className="font-semibold text-lg">{item.id}</p>
             <p className="text-sm italic font-medium mt-1 truncate">{item.name_of_vehicle}</p>
