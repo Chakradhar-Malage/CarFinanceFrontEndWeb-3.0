@@ -14,7 +14,7 @@ const DeleteVehicle = () => {
     }
 
     try {
-      const response = await axios.delete(`http://15.207.48.53:3000/deleteVehicle/${id}`);
+      const response = await axios.delete(`http://72.61.245.17:3000/deleteVehicle/${id}`);
       alert("Success: " + response.data);
     } catch (error) {
       console.error("Error deleting vehicle:", error);

@@ -28,7 +28,7 @@ const GenerateNonGSTInvoice = () => {
 
   useEffect(() => {
     axios
-      .get("http://15.207.48.53:3000/nongstcustomer")
+      .get("http://72.61.245.17:3000/nongstcustomer")
       .then((response) => setCustomersList(response.data as any[]))
       .catch((error) => console.error("Error fetching customers:", error));
   }, []);
@@ -62,7 +62,7 @@ const GenerateNonGSTInvoice = () => {
 
   const generateInvoice = async () => {
     try {
-      const response = await axios.post("http://15.207.48.53:3000/generate-nongst-bill", {
+      const response = await axios.post("http://72.61.245.17:3000/generate-nongst-bill", {
         customerName: customerDetails.name,
         customerMobile: customerDetails.mobile,
         customerAddress: customerDetails.address,

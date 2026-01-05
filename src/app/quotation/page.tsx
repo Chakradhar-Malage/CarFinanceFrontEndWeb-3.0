@@ -44,7 +44,7 @@ export default function ViewQuotations() {
 
         const response = await axios.get(
 
-          "http://15.207.48.53:3000/allquotations"
+          "http://72.61.245.17:3000/allquotations"
 
         );
 
@@ -82,7 +82,7 @@ export default function ViewQuotations() {
 
       const response = await axios.get(
 
-        `http://15.207.48.53:3000/quotations/customer/${encodeURIComponent(
+        `http://72.61.245.17:3000/quotations/customer/${encodeURIComponent(
 
           searchName.trim()
 
@@ -120,7 +120,7 @@ export default function ViewQuotations() {
 
     const url =
 
-      `http://15.207.48.53:3000/quotations/${encodedCustomerName}/${formattedDate}/download`;
+      `http://72.61.245.17:3000/quotations/${encodedCustomerName}/${formattedDate}/download`;
 
 
     console.log("í ½í» ï¸ Download URL:", url);

@@ -26,7 +26,7 @@ const CustomerLedger = () => {
   useEffect(() => {
     const fetchLedgerData = async () => {
       try {
-        const response = await fetch("http://15.207.48.53:3000/getLedgerData");
+        const response = await fetch("http://72.61.245.17:3000/getLedgerData");
         // const response = await fetch("http://localhost:3001/getLedgerData");
 
         const result = await response.json();
@@ -84,7 +84,7 @@ const CustomerLedger = () => {
       transactionType: transactionType,
     };
 
-    fetch("http://15.207.48.53:3000/saveCustomerLedger", {
+    fetch("http://72.61.245.17:3000/saveCustomerLedger", {
       method: "POST",
 
       headers: {

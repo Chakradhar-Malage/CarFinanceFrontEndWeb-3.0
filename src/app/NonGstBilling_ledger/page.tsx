@@ -97,7 +97,7 @@
 //   // Fetch customer names on mount
 //   const fetchCustomerNames = () => {
 //     axios
-//       .get('http://15.207.48.53:3000/nongstcustomer')
+//       .get('http://72.61.245.17:3000/nongstcustomer')
 //       .then((response) => {
 //         const customers = (response.data as { name: string }[]).map(
 //           (customer: { name: string }) => ({
@@ -114,7 +114,7 @@
 
 //   // Fetch ledger data with filters
 //   const fetchLedgerData = () => {
-//     let query = `http://15.207.48.53:3000/nongstbillingledger?`;
+//     let query = `http://72.61.245.17:3000/nongstbillingledger?`;
 
 //     if (customerName) query += `customer_name=${customerName}&`;
 //     if (startDate) query += `start_date=${startDate}&`;
@@ -569,7 +569,7 @@ const NonGSTBillingLedger = () => {
   // Fetch customer names
   const fetchCustomerNames = () => {
     axios
-      .get('http://15.207.48.53:3000/nongstcustomer')
+      .get('http://72.61.245.17:3000/nongstcustomer')
       .then((response) => {
         const customers = (response.data as { name: string }[]).map((customer) => ({
           label: customer.name,
@@ -582,7 +582,7 @@ const NonGSTBillingLedger = () => {
 
   // Fetch ledger data with filters
   const fetchLedgerData = () => {
-    let query = `http://15.207.48.53:3000/nongstbillingledger?`;
+    let query = `http://72.61.245.17:3000/nongstbillingledger?`;
     if (customerName) query += `customer_name=${customerName}&`;
     if (startDate) query += `start_date=${startDate}&`;
     if (endDate) query += `end_date=${endDate}&`;

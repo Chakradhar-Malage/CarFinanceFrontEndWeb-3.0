@@ -41,7 +41,7 @@ const CustomerWiseVehicleDetails = () => {
 
   // Fetch unique customers
   useEffect(() => {
-    fetch("http://15.207.48.53:3000/unique-customers")
+    fetch("http://72.61.245.17:3000/unique-customers")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch customers");
         return res.json();
@@ -81,7 +81,7 @@ const CustomerWiseVehicleDetails = () => {
 
     setLoading(true);
 
-    const url = new URL("http://15.207.48.53:3000/cleared-details");
+    const url = new URL("http://72.61.245.17:3000/cleared-details");
     url.searchParams.set("customer_name", selectedCustomer);
 
     if (startDate && endDate) {

@@ -44,7 +44,7 @@ const GenerateInvoice = () => {
 
   useEffect(() => {
     axios
-      .get("http://15.207.48.53:3000/customers")
+      .get("http://72.61.245.17:3000/customers")
       .then((response) => {
         setCustomersList(response.data as Customer[]);
       })
@@ -83,7 +83,7 @@ const GenerateInvoice = () => {
 
   const generateInvoice = async () => {
     try {
-      const response = await axios.post("http://15.207.48.53:3000/generate-bill", {
+      const response = await axios.post("http://72.61.245.17:3000/generate-bill", {
         customerName: customerDetails.name,
         customerMobile: customerDetails.mobile,
         customerAddress: customerDetails.address,

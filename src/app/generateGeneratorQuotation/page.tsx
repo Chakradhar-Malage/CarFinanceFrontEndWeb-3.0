@@ -30,7 +30,7 @@ const GenerateQuotation = () => {
 
   useEffect(() => {
     axios
-      .get("http://15.207.48.53:3000/generator-quotation-customers")
+      .get("http://72.61.245.17:3000/generator-quotation-customers")
       .then((response) => setCustomersList(response.data as any[]))
       .catch((error) => console.error("Error fetching customers:", error));
   }, []);
@@ -70,7 +70,7 @@ const GenerateQuotation = () => {
 
   const generateInvoice = async () => {
     try {
-      const response = await axios.post("http://15.207.48.53:3000/generate-generator-quotation", {
+      const response = await axios.post("http://72.61.245.17:3000/generate-generator-quotation", {
         customerName: customerDetails.name,
         customerMobile: customerDetails.mobile,
         customerAddress: customerDetails.address,

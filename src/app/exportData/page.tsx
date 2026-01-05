@@ -76,7 +76,7 @@ const ExportData = () => {
 
   //   try {
   //     const response = await fetch(
-  //       `http://15.207.48.53:3000/export-month?month=${month}`
+  //       `http://72.61.245.17:3000/export-month?month=${month}`
   //     );
 
   //     const result = await response.json();
@@ -111,11 +111,11 @@ const ExportData = () => {
 
     try {
       const response = await fetch(
-        `http://15.207.48.53:3000/export-month?month=${month}&year=${year}`
+        `http://72.61.245.17:3000/export-month?month=${month}&year=${year}`
       );
       // Old api call; revert back to this api call if anything goes wrong
       // const response = await fetch(
-      //   `http://15.207.48.53:3000/export-month?month=${month}`
+      //   `http://72.61.245.17:3000/export-month?month=${month}`
       // );
 
       const result = await response.json();

@@ -26,7 +26,7 @@ const PersonalBankAccountTracking = () => {
   // Fetch the list of accounts from the API
   const fetchAccounts = async () => {
     try {
-      const response = await fetch('http://15.207.48.53:3000/api/accounts');
+      const response = await fetch('http://72.61.245.17:3000/api/accounts');
       if (!response.ok) {
         console.error('Error fetching accounts');
         return;
@@ -60,7 +60,7 @@ const PersonalBankAccountTracking = () => {
     };
 
     try {
-      const response = await fetch('http://15.207.48.53:3000/api/accounts', {
+      const response = await fetch('http://72.61.245.17:3000/api/accounts', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
@@ -93,7 +93,7 @@ const PersonalBankAccountTracking = () => {
       return;
     }
     try {
-      const response = await fetch('http://15.207.48.53:3000/api/accounts', {
+      const response = await fetch('http://72.61.245.17:3000/api/accounts', {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ bankName: removeBankName }),

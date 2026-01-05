@@ -31,7 +31,7 @@ const ViewGeneratorQuotationInvoices = () => {
 
         const response = await axios.get(
 
-          "http://15.207.48.53:3000/allgeneratorquotations"
+          "http://72.61.245.17:3000/allgeneratorquotations"
 
         );
 
@@ -65,7 +65,7 @@ const ViewGeneratorQuotationInvoices = () => {
 
       const response = await axios.get(
 
-        `http://15.207.48.53:3000/generator-quotations/customer/${encodeURIComponent(
+        `http://72.61.245.17:3000/generator-quotations/customer/${encodeURIComponent(
 
           searchName.trim()
 
@@ -103,7 +103,7 @@ const ViewGeneratorQuotationInvoices = () => {
 
     const formattedDate = encodeURIComponent(formatDateForUrl(createdAt));
 
-    const url = `http://15.207.48.53:3000/generator-quotations/${encodedCustomerName}/${formattedDate}/download`;
+    const url = `http://72.61.245.17:3000/generator-quotations/${encodedCustomerName}/${formattedDate}/download`;
 
 
     console.log("Download URL:", url);

@@ -30,7 +30,7 @@ function TransactionsScreenContent() {
   const fetchTransactions = useCallback(async () => {
     setIsLoading(true);
     try {
-      let url = `http://15.207.48.53:3000/api/transactions?bankName=${encodeURIComponent(
+      let url = `http://72.61.245.17:3000/api/transactions?bankName=${encodeURIComponent(
         bankName || ""
       )}`;
 

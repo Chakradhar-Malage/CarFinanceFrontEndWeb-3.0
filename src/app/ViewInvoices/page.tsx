@@ -54,7 +54,7 @@ const ViewInvoices = () => {
 
   const fetchInvoices = async () => {
     try {
-      const response = await axios.get('http://15.207.48.53:3000/allinvoices');
+      const response = await axios.get('http://72.61.245.17:3000/allinvoices');
       setInvoices(response.data as Invoice[]);
       setFilteredInvoices(response.data as Invoice[]);
     } catch (error) {
@@ -69,7 +69,7 @@ const ViewInvoices = () => {
     }
     try {
       const response = await axios.get(
-        `http://15.207.48.53:3000/invoices/customer/${searchName}`
+        `http://72.61.245.17:3000/invoices/customer/${searchName}`
       );
       setFilteredInvoices(response.data as Invoice[]);
     } catch (error) {
@@ -81,14 +81,14 @@ const ViewInvoices = () => {
   const openInBrowser = (customerName: string, createdAt: string) => {
     const formattedDate = formatDateForUrl(createdAt);
     const encodedCreatedAt = encodeURIComponent(formattedDate);
-    const url = `http://15.207.48.53:3000/invoices/${customerName}/${encodedCreatedAt}/download`;
+    const url = `http://72.61.245.17:3000/invoices/${customerName}/${encodedCreatedAt}/download`;
     window.open(url, '_blank');
   };
 
   const deleteInvoice = async (customerName: string, createdAt: string) => {
     const formattedDate = formatDateForUrl(createdAt);
     const encodedCreatedAt = encodeURIComponent(formattedDate);
-    const url = `http://15.207.48.53:3000/deleteinvoices/${customerName}/${encodedCreatedAt}`;
+    const url = `http://72.61.245.17:3000/deleteinvoices/${customerName}/${encodedCreatedAt}`;
     try {
       await axios.delete(url);
       // Update both states to remove the deleted invoice

@@ -49,7 +49,7 @@ const ViewNonGSTInvoices = () => {
 
   const fetchInvoices = async () => {
     try {
-      const response = await axios.get('http://15.207.48.53:3000/allnongstinvoices');
+      const response = await axios.get('http://72.61.245.17:3000/allnongstinvoices');
       setInvoices(response.data as any[]);
       setFilteredInvoices(response.data as any[]);
     } catch (error) {
@@ -64,7 +64,7 @@ const ViewNonGSTInvoices = () => {
     }
     try {
       const response = await axios.get(
-        `http://15.207.48.53:3000/nongstinvoices/customer/${searchName}`
+        `http://72.61.245.17:3000/nongstinvoices/customer/${searchName}`
       );
       setFilteredInvoices(response.data as any[]);
     } catch (error) {
@@ -77,7 +77,7 @@ const ViewNonGSTInvoices = () => {
   const openInBrowser = (customerName: string, createdAt: string) => {
     const formattedDate = formatDateForUrl(createdAt);
     const encodedCreatedAt = encodeURIComponent(formattedDate);
-    const url = `http://15.207.48.53:3000/nongstinvoices/${customerName}/${encodedCreatedAt}/download`;
+    const url = `http://72.61.245.17:3000/nongstinvoices/${customerName}/${encodedCreatedAt}/download`;
     window.open(url, '_blank');
   };
 
@@ -85,7 +85,7 @@ const ViewNonGSTInvoices = () => {
   const deleteNonGstInvoice = async (customerName: string, createdAt: string) => {
     const formattedDate = formatDateForUrl(createdAt);
     const encodedCreatedAt = encodeURIComponent(formattedDate);
-    const url = `http://15.207.48.53:3000/deleteNonGstinvoices/${customerName}/${encodedCreatedAt}`;
+    const url = `http://72.61.245.17:3000/deleteNonGstinvoices/${customerName}/${encodedCreatedAt}`;
     try {
       await axios.delete(url);
       window.alert('Invoice deleted successfully');

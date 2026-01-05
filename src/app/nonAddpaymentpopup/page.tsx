@@ -23,7 +23,7 @@ const NonAddPaymentPopup = () => {
 
   const fetchCustomerNames = async () => {
     try {
-      const response = await axios.get('http://15.207.48.53:3000/nongstcustomer');
+      const response = await axios.get('http://72.61.245.17:3000/nongstcustomer');
       const customers = (response.data as any[]).map((customer: any) => ({
         label: customer.name,
         value: customer.name,
@@ -42,7 +42,7 @@ const NonAddPaymentPopup = () => {
     }
 
     try {
-      const response = await axios.post('http://15.207.48.53:3000/nonaddPayment', {
+      const response = await axios.post('http://72.61.245.17:3000/nonaddPayment', {
         customer_id: selectedCustomer.value,
         amount: parseFloat(paymentAmount),
         method: paymentMethod,

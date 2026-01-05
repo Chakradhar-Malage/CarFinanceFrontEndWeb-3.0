@@ -84,7 +84,7 @@
 //   // Fetch customer names (runs only once on mount)
 //   const fetchCustomerNames = () => {
 //     axios
-//       .get('http://15.207.48.53:3000/customers')
+//       .get('http://72.61.245.17:3000/customers')
 //       .then((response) => {
 //         const customers = (response.data as any[]).map((customer: any) => ({
 //           label: customer.name,
@@ -97,7 +97,7 @@
 
 //   // Fetch ledger data using the provided filters
 //   const fetchLedgerData = () => {
-//     let query = `http://15.207.48.53:3000/gstbillingledger?`;
+//     let query = `http://72.61.245.17:3000/gstbillingledger?`;
 //     if (customerName) query += `customer_name=${customerName}&`;
 //     if (startDate) query += `start_date=${startDate}&`;
 //     if (endDate) query += `end_date=${endDate}&`;
@@ -542,7 +542,7 @@ const GSTBillingLedger = () => {
   // Fetch customer names
   const fetchCustomerNames = () => {
     axios
-      .get('http://15.207.48.53:3000/customers')
+      .get('http://72.61.245.17:3000/customers')
       .then((response) => {
         const customers = (response.data as any[]).map((customer: any) => ({
           label: customer.name,
@@ -555,7 +555,7 @@ const GSTBillingLedger = () => {
 
   // Fetch ledger data with filters
   const fetchLedgerData = () => {
-    let query = 'http://15.207.48.53:3000/gstbillingledger?';
+    let query = 'http://72.61.245.17:3000/gstbillingledger?';
     if (customerName) query += `customer_name=${customerName}&`;
     if (startDate) query += `start_date=${startDate}&`;
     if (endDate) query += `end_date=${endDate}&`;

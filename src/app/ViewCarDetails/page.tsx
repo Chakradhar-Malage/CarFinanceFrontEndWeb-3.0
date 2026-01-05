@@ -83,7 +83,7 @@ const ViewCarDetails = () => {
     const fetchVehicleDetails = async () => {
       try {
         const response = await fetch(
-          `http://15.207.48.53:3000/searchById?id=${encodeURIComponent(
+          `http://72.61.245.17:3000/searchById?id=${encodeURIComponent(
             vehicleId
           )}`
         );
@@ -133,7 +133,7 @@ const ViewCarDetails = () => {
     setIsLoadingSuggestions(true);
     try {
       const response = await fetch(
-        `http://15.207.48.53:3000/issued-to-customer-suggestion?name=${encodeURIComponent(query)}`
+        `http://72.61.245.17:3000/issued-to-customer-suggestion?name=${encodeURIComponent(query)}`
       );
       const data = await response.json();
       setCustomerSuggestions(data.customers || []);
@@ -193,7 +193,7 @@ const ViewCarDetails = () => {
       updatedCarDetails.date = date; // Always send date since it's required
 
       const response = await axios.put(
-        `http://15.207.48.53:3000/updateCarDetails/${vehicleId}`,
+        `http://72.61.245.17:3000/updateCarDetails/${vehicleId}`,
         updatedCarDetails
       );
 
@@ -236,7 +236,7 @@ const ViewCarDetails = () => {
       };
 
       const response = await axios.post(
-        "http://15.207.48.53:3000/saveClearedDetails",
+        "http://72.61.245.17:3000/saveClearedDetails",
         dataToSave
       );
 
@@ -289,7 +289,7 @@ const ViewCarDetails = () => {
     if (pendingAmount > 0) {
       try {
         const response = await axios.post(
-          "http://15.207.48.53:3000/processPendingAmount",
+          "http://72.61.245.17:3000/processPendingAmount",
           {
             vehicleId: vehicleId,
 

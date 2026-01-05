@@ -38,7 +38,7 @@ const BankAccountDetails = () => {
   // Function to fetch all accounts, then filter for the current account by bankName
   const fetchAccountData = async () => {
     try {
-      const response = await fetch('http://15.207.48.53:3000/api/accounts');
+      const response = await fetch('http://72.61.245.17:3000/api/accounts');
       if (!response.ok) {
         const errorData = await response.json();
         console.error('Error fetching accounts:', errorData.message);
@@ -95,7 +95,7 @@ const BankAccountDetails = () => {
     };
 
     try {
-      const response = await fetch('http://15.207.48.53:3000/api/transactions', {
+      const response = await fetch('http://72.61.245.17:3000/api/transactions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

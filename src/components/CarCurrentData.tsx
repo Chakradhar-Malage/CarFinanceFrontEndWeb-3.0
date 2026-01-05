@@ -21,7 +21,7 @@ const CarCurrentData = () => {
 
   const fetchCarData = async () => {
     try {
-      const response = await axios.get<CarDataResponse>('http://15.207.48.53:3000/allentries');
+      const response = await axios.get<CarDataResponse>('http://72.61.245.17:3000/allentries');
       const { data, totalPendingAmount, totalCount } = response.data;
       setCarData(data);
       globalState.totalPendingAmount = totalPendingAmount;
