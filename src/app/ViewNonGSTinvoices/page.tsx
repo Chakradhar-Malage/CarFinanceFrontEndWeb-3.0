@@ -81,7 +81,6 @@ const ViewNonGSTInvoices = () => {
     window.open(url, '_blank');
   };
 
-  // Delete function for non-GST invoices
   const deleteNonGstInvoice = async (customerName: string, createdAt: string) => {
     const formattedDate = formatDateForUrl(createdAt);
     const encodedCreatedAt = encodeURIComponent(formattedDate);
@@ -89,16 +88,17 @@ const ViewNonGSTInvoices = () => {
     try {
       await axios.delete(url);
       window.alert('Invoice deleted successfully');
-      setInvoices((prev) =>
+      setInvoices(prev =>
         prev.filter(
-          (invoice) =>
-            invoice.customer_name !== customerName || invoice.created_at !== createdAt
+          invoice =>
+            !(invoice.customer_name === customerName && invoice.created_at === createdAt)
         )
       );
-      setFilteredInvoices((prev) =>
+
+      setFilteredInvoices(prev =>
         prev.filter(
-          (invoice) =>
-            invoice.customer_name !== customerName || invoice.created_at !== createdAt
+          invoice =>
+            !(invoice.customer_name === customerName && invoice.created_at === createdAt)
         )
       );
     } catch (error) {
@@ -106,6 +106,13 @@ const ViewNonGSTInvoices = () => {
       window.alert('Failed to delete invoice');
     }
   };
+
+  const confirmDeleteNonGstInvoice = (customerName: string, createdAt: string) => {
+    if (window.confirm('Are you sure you want to delete this Non-GST invoice?')) {
+      deleteNonGstInvoice(customerName, createdAt);
+    }
+  };
+
 
   return (
     <div className="container">
@@ -162,7 +169,7 @@ const ViewNonGSTInvoices = () => {
           <div key={index} className="invoice-item">
             <div
               className="delete-icon"
-              onClick={() => deleteNonGstInvoice(item.customer_name, item.created_at)}
+              onClick={() => confirmDeleteNonGstInvoice(item.customer_name, item.created_at)}
             >
               <FaTrash size={24} color="red" />
             </div>
